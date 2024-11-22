@@ -487,7 +487,8 @@ void gldSetAppCustomizations(void)
 		return;
 	}
 	// Case 7: Quake3 is waiting for DDraw objects to be released at exit
-	if (strstr(szModuleFileName, "QUAKE")) {
+    if (strstr(szModuleFileName, "QUAKE") || strstr(szModuleFileName, "Wolf") ||
+        strstr(szModuleFileName,"ioquake")) {
 		glb.bMultiThreaded = FALSE;
 		glb.bDirectDrawPersistant = FALSE;
 		glb.bPersistantBuffers = FALSE;
@@ -583,6 +584,21 @@ void gldSetAppCustomizations(void)
             _gldDumpAppCust(14);
             return;
         }
+	}
+
+
+	// Case 15: Enemy Territory
+	if (strstr(szModuleFileName, "ET")) {
+		glb.bMultiThreaded = FALSE;
+		glb.bDirectDrawPersistant = FALSE;
+		glb.bPersistantBuffers = FALSE;
+        glb.bFullscreenBlit = FALSE;
+        //glb.bFastFPU		= FALSE;
+		glb.bDisableZTrick	= TRUE;
+        _gldDumpAppCust(15);
+		// FALL THROUGH
+		return;
+		
 	}
 }
 
