@@ -151,8 +151,8 @@ BOOL gldGetDXErrorString_DX(
 	// Return a string describing the input HRESULT error code
 	//
 
-	const char *pStr = DXGetErrorString9(hr);
-
+	//const char *pStr = DXGetErrorString9(hr);
+    const char *pStr = "DXGetErrorString9() not supported...";
 	if (pStr == NULL)
 		return FALSE;
 
@@ -253,17 +253,18 @@ HRESULT _gldCreatePrimitiveBuffer(
 		return E_FAIL;
 
 	// Create a system-memory buffer to hold the vertices of the current primitive.
-	gld->dwMaxPrimVerts	= GLD_PRIM_BLOCK_SIZE;
+	gld->dwMaxPrimVerts	= GLD_PRIM_BLOCK_SIZE * 2;
 	gld->pPrim = malloc(GLD_4D_VERTEX_SIZE * gld->dwMaxPrimVerts);
 	if (gld->pPrim == NULL)
 		return E_OUTOFMEMORY;
 	gld->dwPrimVert = 0;
 
 	// Create a Direct3D Vertex Buffer to hold vertices to be passed to hardware.
-	gld->dwMaxVBVerts	= 65535;
+	gld->dwMaxVBVerts	= 65535 * 2;
 	dwUsage = D3DUSAGE_DYNAMIC | D3DUSAGE_WRITEONLY;	// We will lock frequently and never read from buffer (write only).
 	if (!gld->bHasHWTnL)
 		dwUsage	|= D3DUSAGE_SOFTWAREPROCESSING;
+
 	hr = IDirect3DDevice9_CreateVertexBuffer(
 		gld->pDev,
 		GLD_4D_VERTEX_SIZE * gld->dwMaxVBVerts,
@@ -1149,8 +1150,10 @@ BOOL gldInitialiseMesa_DX(
 	lpCtx->glCtx->Const.MaxTextureLevels = (TextureLevels) ? TextureLevels : 8;
 
 	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_LIGHTING, FALSE);
-	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CULLMODE, D3DCULL_NONE);
-	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_DITHERENABLE, TRUE);
+	//IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CULLMODE, D3DCULL_NONE);
+    IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CULLMODE, D3DCULL_CCW);
+	
+    IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_DITHERENABLE, TRUE);
 	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_SHADEMODE, D3DSHADE_GOURAUD);
 	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CLIPPING, TRUE); // KeithH
 
@@ -1175,8 +1178,8 @@ BOOL gldInitialiseMesa_DX(
 
 // Dump this in a Release build as well, now.
 //#ifdef _DEBUG
-	gldLogPrintf(GLDLOG_INFO, "HW TnL: %s",
-		gld->bHasHWTnL ? (bSoftwareTnL ? "Disabled" : "Enabled") : "Unavailable");
+	gldLogPrintf(GLDLOG_INFO, "HW TnL: %s , SW TnL: %s",
+		gld->bHasHWTnL ? "Enabled" : "Disabled", bSoftwareTnL ? "Enabled" : "Disabled");
 //#endif
 
 	gldEnableExtensions_DX9(lpCtx->glCtx);
