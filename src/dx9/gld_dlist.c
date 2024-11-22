@@ -311,9 +311,7 @@ static void gldFlushStreamSource(
 	dwVBSize = GLD_4D_VERTEX_SIZE * dl->dwNextVBVert;
 
 	// Hint to D3D as to where to put the buffer
-	//dwPool = D3DPOOL_MANAGED;
-
-    dwPool = D3DPOOL_DEFAULT;
+	dwPool = D3DPOOL_MANAGED;
 
 	// Create a D3D buffer
 	hr = IDirect3DDevice9_CreateVertexBuffer(

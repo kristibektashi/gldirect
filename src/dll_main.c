@@ -584,21 +584,6 @@ void gldSetAppCustomizations(void)
             return;
         }
 	}
-
-
-	// Case 15: Enemy Territory
-	if (strstr(szModuleFileName, "ET")) {
-		glb.bMultiThreaded = FALSE;
-		glb.bDirectDrawPersistant = FALSE;
-		glb.bPersistantBuffers = FALSE;
-        glb.bFullscreenBlit = FALSE;
-        //glb.bFastFPU		= FALSE;
-		glb.bDisableZTrick	= TRUE;
-        _gldDumpAppCust(15);
-		// FALL THROUGH
-		return;
-		
-	}
 }
 
 // ***********************************************************************

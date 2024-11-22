@@ -2,22 +2,22 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="driver">
-      <UniqueIdentifier>{1e9fc795-159f-4c82-82c1-98adf0681b2b}</UniqueIdentifier>
+      <UniqueIdentifier>{9fa6150b-a398-41d4-968e-ce1092c172d7}</UniqueIdentifier>
     </Filter>
     <Filter Include="def">
-      <UniqueIdentifier>{2579b807-607f-4740-8a46-d101ff2abec1}</UniqueIdentifier>
+      <UniqueIdentifier>{7e655ad5-2798-45db-b810-6252e62752ba}</UniqueIdentifier>
     </Filter>
     <Filter Include="core">
-      <UniqueIdentifier>{de15a1d5-5063-4511-9230-40efde398ad2}</UniqueIdentifier>
+      <UniqueIdentifier>{ce9d73b5-3345-42f0-89b6-daa25aab0b01}</UniqueIdentifier>
     </Filter>
     <Filter Include="array element">
-      <UniqueIdentifier>{4690b9d2-144f-414a-9208-4444bc2423f3}</UniqueIdentifier>
+      <UniqueIdentifier>{39ccf92c-6e65-4cd5-8d34-2cd25b342c6b}</UniqueIdentifier>
     </Filter>
     <Filter Include="mesa headers">
-      <UniqueIdentifier>{f1687096-870b-42a9-a859-caaf5fe4c335}</UniqueIdentifier>
+      <UniqueIdentifier>{c0d17d6a-c9bf-4996-b414-06d7079f887f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{1ff82b1e-ea9c-42eb-aabe-a5320ee21669}</UniqueIdentifier>
+      <UniqueIdentifier>{789eabc1-3f2b-4378-982b-5f1a3471ef0c}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
   </ItemGroup>
@@ -117,12 +117,6 @@
     <ClInclude Include="..\mesa\src\mesa\main\colormac.h">
       <Filter>mesa headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\x86\common_x86_asm.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\x86\common_x86_features.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\mesa\src\mesa\main\config.h">
       <Filter>mesa headers</Filter>
     </ClInclude>
@@ -206,5 +200,6 @@
     <None Include="opengl32.def">
       <Filter>def</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

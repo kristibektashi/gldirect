@@ -240,13 +240,10 @@ typedef struct tagPIXELFORMATDESCRIPTOR PIXELFORMATDESCRIPTOR, *PPIXELFORMATDESC
 #endif
 #endif
 
-#ifdef USE_X86_ASM
-#define _NORMAPI _ASMAPI
-#define _NORMAPIP _ASMAPIP
-#else
+
 #define _NORMAPI
 #define _NORMAPIP *
-#endif
+
 
 
 /* Function inlining */

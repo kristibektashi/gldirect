@@ -372,34 +372,11 @@ static INLINE int iround(float f)
    return r;
 }
 #define IROUND(x)  iround(x)
-#elif defined(USE_X86_ASM) && defined(__GNUC__) && defined(__i386__)
-static INLINE int iround(float f)
-{
-   int r;
-   __asm__ ("fistpl %0" : "=m" (r) : "t" (f) : "st");
-   return r;
-}
+
 #define IROUND(x)  iround(x)
-#elif defined(USE_X86_ASM) && defined(__MSC__) && defined(__WIN32__) && !defined(_M_ARM)
-static INLINE int iround(float f)
-{
-   int r;
-   _asm {
-	 fld f
-	 fistp r
-	}
-   return r;
-}
+
 #define IROUND(x)  iround(x)
-#elif defined(__WATCOMC__) && defined(__386__)
-long iround(float f);
-#pragma aux iround =                    \
-	"push   eax"                        \
-	"fistp  dword ptr [esp]"            \
-	"pop    eax"                        \
-	parm [8087]                         \
-	value [eax]                         \
-	modify exact [eax];
+
 #define IROUND(x)  iround(x)
 #else
 #define IROUND(f)  ((int) (((f) >= 0.0F) ? ((f) + 0.5F) : ((f) - 0.5F)))
@@ -419,74 +396,20 @@ long iround(float f);
 /***
  *** IFLOOR: return (as an integer) floor of float
  ***/
-#if defined(USE_X86_ASM) && defined(__GNUC__) && defined(__i386__)
-/*
- * IEEE floor for computers that round to nearest or even.
- * 'f' must be between -4194304 and 4194303.
- * This floor operation is done by "(iround(f + .5) + iround(f - .5)) >> 1",
- * but uses some IEEE specific tricks for better speed.
- * Contributed by Josh Vanderhoof
- */
-static INLINE int ifloor(float f)
-{
-   int ai, bi;
-   double af, bf;
-   af = (3 << 22) + 0.5 + (double)f;
-   bf = (3 << 22) + 0.5 - (double)f;
-   /* GCC generates an extra fstp/fld without this. */
-   __asm__ ("fstps %0" : "=m" (ai) : "t" (af) : "st");
-   __asm__ ("fstps %0" : "=m" (bi) : "t" (bf) : "st");
-   return (ai - bi) >> 1;
-}
-#define IFLOOR(x)  ifloor(x)
-#elif defined(USE_IEEE)
-static INLINE int ifloor(float f)
-{
-   int ai, bi;
-   double af, bf;
-   fi_type u;
 
-   af = (3 << 22) + 0.5 + (double)f;
-   bf = (3 << 22) + 0.5 - (double)f;
-   u.f = (float) af;  ai = u.i;
-   u.f = (float) bf;  bi = u.i;
-   return (ai - bi) >> 1;
-}
-#define IFLOOR(x)  ifloor(x)
-#else
 static INLINE int ifloor(float f)
 {
    int i = IROUND(f);
    return (i > f) ? i - 1 : i;
 }
 #define IFLOOR(x)  ifloor(x)
-#endif
 
 
 /***
  *** ICEIL: return (as an integer) ceiling of float
  ***/
-#if defined(USE_X86_ASM) && defined(__GNUC__) && defined(__i386__)
-/*
- * IEEE ceil for computers that round to nearest or even.
- * 'f' must be between -4194304 and 4194303.
- * This ceil operation is done by "(iround(f + .5) + iround(f - .5) + 1) >> 1",
- * but uses some IEEE specific tricks for better speed.
- * Contributed by Josh Vanderhoof
- */
-static INLINE int iceil(float f)
-{
-   int ai, bi;
-   double af, bf;
-   af = (3 << 22) + 0.5 + (double)f;
-   bf = (3 << 22) + 0.5 - (double)f;
-   /* GCC generates an extra fstp/fld without this. */
-   __asm__ ("fstps %0" : "=m" (ai) : "t" (af) : "st");
-   __asm__ ("fstps %0" : "=m" (bi) : "t" (bf) : "st");
-   return (ai - bi + 1) >> 1;
-}
-#define ICEIL(x)  iceil(x)
-#elif defined(USE_IEEE)
+
+#if defined(USE_IEEE)
 static INLINE int iceil(float f)
 {
    int ai, bi;

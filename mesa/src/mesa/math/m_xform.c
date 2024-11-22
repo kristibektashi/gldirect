@@ -47,9 +47,7 @@
 #include "m_debug.h"
 #endif
 
-#ifdef USE_X86_ASM
-#include "x86/common_x86_asm.h"
-#endif
+
 
 #ifdef USE_SPARC_ASM
 #include "sparc/sparc.h"
@@ -202,9 +200,7 @@ _math_init_transformation( void )
    _math_test_all_cliptest_functions( "default" );
 #endif
 
-#ifdef USE_X86_ASM
-   _mesa_init_all_x86_transform_asm();
-#endif
+
 #ifdef USE_SPARC_ASM
    _mesa_init_all_sparc_transform_asm();
 #endif

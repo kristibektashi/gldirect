@@ -43,7 +43,6 @@
 #include "gld_log.h"
 #include "glheader.h"
 
-#include "common_x86_asm.h"		// For glGetString().
 #include "version.h"			// For MESA_VERSION_STRING
 
 //---------------------------------------------------------------------------
@@ -57,7 +56,7 @@ static char _gldRendererString[1024];
 static char *g_szGLDVendor		= "SciTech Software, Inc.";
 
 // Based on mesa\src\mesa\main\get.c::_mesa_GetString
-static char *g_szGLDVersion		= "1.1 Mesa " MESA_VERSION_STRING;
+static char *g_szGLDVersion		= "1.4 Mesa " MESA_VERSION_STRING;
 
 // extensions
 // Quake3 is slower with GL_EXT_compiled_vertex_array !
@@ -204,11 +203,8 @@ const GLubyte* _gldGetStringGeneric(
 	case GL_VERSION:
 		return (const GLubyte *) g_szGLDVersion;
 	case GL_RENDERER:
-		sprintf(_gldRendererString, "GLDirect 5.0 %s%s%s%s (%s %s)",
-			_mesa_x86_cpu_features	? "x86"		: "",
-			cpu_has_mmx				? "/MMX"		: "",
-			cpu_has_3dnow			? "/3DNow!"		: "",
-			cpu_has_xmm				? "/SSE"		: "",
+		sprintf(_gldRendererString, "GLDirect 5.0 (%s %s)",
+
 			__DATE__, __TIME__);
 		return (const GLubyte *) _gldRendererString;
 	case GL_EXTENSIONS:

@@ -520,44 +520,8 @@ extern void __glapi_sparc_icache_flush(unsigned int *);
 static void *
 generate_entrypoint(GLuint functionOffset)
 {
-#if defined(USE_X86_ASM)
-   /*
-    * This x86 code contributed by Josh Vanderhoof.
-    *
-    *  0:   a1 10 32 54 76          movl   __glapi_Dispatch,%eax
-    *       00 01 02 03 04
-    *  5:   85 c0                   testl  %eax,%eax
-    *       05 06
-    *  7:   74 06                   je     f <entrypoint+0xf>
-    *       07 08
-    *  9:   ff a0 10 32 54 76       jmp    *0x76543210(%eax)
-    *       09 0a 0b 0c 0d 0e
-    *  f:   e8 fc ff ff ff          call   __glapi_get_dispatch
-    *       0f 10 11 12 13
-    * 14:   ff a0 10 32 54 76       jmp    *0x76543210(%eax)
-    *       14 15 16 17 18 19
-    */
-   static const unsigned char insn_template[] = {
-      0xa1, 0x00, 0x00, 0x00, 0x00,
-      0x85, 0xc0,
-      0x74, 0x06,
-      0xff, 0xa0, 0x00, 0x00, 0x00, 0x00,
-      0xe8, 0x00, 0x00, 0x00, 0x00,
-      0xff, 0xa0, 0x00, 0x00, 0x00, 0x00
-   };
-   unsigned char *code = (unsigned char *) malloc(sizeof(insn_template));
-   unsigned int next_insn;
-   if (code) {
-      memcpy(code, insn_template, sizeof(insn_template));
 
-      *(unsigned int *)(code + 0x01) = (unsigned int)&_glapi_Dispatch;
-      *(unsigned int *)(code + 0x0b) = (unsigned int)functionOffset * 4;
-      next_insn = (unsigned int)(code + 0x14);
-      *(unsigned int *)(code + 0x10) = (unsigned int)_glapi_get_dispatch - next_insn;
-      *(unsigned int *)(code + 0x16) = (unsigned int)functionOffset * 4;
-   }
-   return code;
-#elif defined(USE_SPARC_ASM)
+#if defined(USE_SPARC_ASM)
 
 #if defined(__sparc_v9__) && !defined(__linux__)
    static const unsigned int insn_template[] = {
@@ -619,13 +583,7 @@ generate_entrypoint(GLuint functionOffset)
 static void
 fill_in_entrypoint_offset(void *entrypoint, GLuint offset)
 {
-#if defined(USE_X86_ASM)
-
-   unsigned char *code = (unsigned char *) entrypoint;
-   *(unsigned int *)(code + 0x0b) = offset * 4;
-   *(unsigned int *)(code + 0x16) = offset * 4;
-
-#elif defined(USE_SPARC_ASM)
+#if defined(USE_SPARC_ASM)
 
    /* XXX this hasn't been tested! */
    unsigned int *code = (unsigned int *) entrypoint;

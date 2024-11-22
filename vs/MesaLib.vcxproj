@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|ARM">
       <Configuration>Debug</Configuration>
@@ -19,31 +19,33 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{B6293DC7-7988-4595-B42B-C1B82C8D0CB9}</ProjectGuid>
     <RootNamespace>MesaLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -68,18 +70,21 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+    <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\mesalib\MesaLib_Debug\</OutDir>
     <IntDir>.\mesalib\MesaLib_Debug\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\mesalib\MesaLib_Release\</OutDir>
     <IntDir>.\mesalib\MesaLib_Release\</IntDir>
+    <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions>/Zm280  %(AdditionalOptions)</AdditionalOptions>
@@ -183,11 +188,11 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;..\nasm-0.99.06;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Release/MesaLib.pch</PrecompiledHeaderOutputFile>
@@ -196,9 +201,6 @@
       <ProgramDataBaseFileName>.\mesalib\MesaLib_Release/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <UndefinePreprocessorDefinitions>
-      </UndefinePreprocessorDefinitions>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -214,6 +216,8 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\mesa\src\mesa\glapi\glapi.c" />
+    <ClCompile Include="..\mesa\src\mesa\glapi\glthread.c" />
     <ClCompile Include="..\mesa\src\mesa\main\accum.c" />
     <ClCompile Include="..\mesa\src\mesa\main\api_arrayelt.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -285,10 +289,6 @@
     <ClCompile Include="..\mesa\src\mesa\math\m_translate.c" />
     <ClCompile Include="..\mesa\src\mesa\math\m_vector.c" />
     <ClCompile Include="..\mesa\src\mesa\math\m_xform.c" />
-    <ClCompile Include="..\mesa\src\mesa\glapi\glapi.c" />
-    <ClCompile Include="..\mesa\src\mesa\glapi\glthread.c" />
-    <ClCompile Include="..\mesa\src\mesa\x86\common_x86.c" />
-    <ClCompile Include="..\mesa\src\mesa\x86\x86.c" />
     <ClCompile Include="..\mesa\src\mesa\tnl\t_array_api.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
@@ -411,74 +411,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\mesa\src\mesa\x86\common_x86_asm.S">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\tnl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
     </CustomBuild>
-    <CustomBuild Include="..\mesa\src\mesa\x86\glapi_x86.S">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="..\mesa\src\mesa\x86\x86_cliptest.S">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform2.S">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform3.S">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform4.S">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="..\mesa\src\mesa\tnl\t_array_api.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
@@ -534,12 +472,6 @@ nasm $(IntDir)%(Filename).asm -fwin32
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="..\mesa\src\mesa\tnl\t_vtx_api.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="..\mesa\src\mesa\tnl\tnl.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

@@ -54,14 +54,14 @@
 //
 //  Return: Converted string 
 //
-const char*  __stdcall DXGetErrorString9A(HRESULT hr);
-const WCHAR* __stdcall DXGetErrorString9W(HRESULT hr);
-
-#ifdef UNICODE
-    #define DXGetErrorString9 DXGetErrorString9W
-#else
-    #define DXGetErrorString9 DXGetErrorString9A
-#endif 
+//const char*  __stdcall DXGetErrorStringA(HRESULT hr);
+//const WCHAR* __stdcall DXGetErrorStringW(HRESULT hr);
+//
+//#ifdef UNICODE
+//    #define DXGetErrorString DXGetErrorStringW
+//#else
+//    #define DXGetErrorString DXGetErrorStringA
+//#endif 
 
 
 //
