@@ -123,6 +123,7 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>opengl32</TargetName>
     <GenerateManifest>false</GenerateManifest>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
