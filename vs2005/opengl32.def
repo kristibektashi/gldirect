@@ -398,6 +398,7 @@ EXPORTS
  glPrioritizeTexturesEXT
  glCopyTexSubImage3DEXT
  glTexImage3DEXT
+ glTexImage3D=glTexImage3DEXT
  glTexSubImage3DEXT
 
  glWindowPos4fMESA

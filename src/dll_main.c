@@ -487,8 +487,7 @@ void gldSetAppCustomizations(void)
 		return;
 	}
 	// Case 7: Quake3 is waiting for DDraw objects to be released at exit
-    if (strstr(szModuleFileName, "QUAKE") || strstr(szModuleFileName, "Wolf") ||
-        strstr(szModuleFileName,"ioquake")) {
+	if (strstr(szModuleFileName, "QUAKE")) {
 		glb.bMultiThreaded = FALSE;
 		glb.bDirectDrawPersistant = FALSE;
 		glb.bPersistantBuffers = FALSE;
