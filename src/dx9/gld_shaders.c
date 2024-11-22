@@ -836,7 +836,6 @@ void _gldOutputDebugShaderText(
 	}
 
 	// Fog
-
 	sprintf(szLine, "// Fog        : %s\n", (es->Fog.Enabled) ? g_pszEnabled : g_pszDisabled);
 	strcat(pOut, szLine);
 	if (es->Fog.Enabled) {
