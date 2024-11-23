@@ -431,7 +431,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -473,7 +473,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -514,7 +514,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -556,7 +556,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -598,7 +598,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -640,7 +640,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -681,10 +681,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9d.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\Release\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
@@ -721,10 +721,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9d.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\Release\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
@@ -761,10 +761,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9d.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\Release\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
@@ -801,10 +801,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9d.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\Release\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
@@ -841,10 +841,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9d.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\Release\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
@@ -881,10 +881,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9d.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\Release\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
@@ -926,7 +926,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9d.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -971,7 +971,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9d.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -1016,7 +1016,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9d.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -1061,7 +1061,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9d.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -1106,7 +1106,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9d.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -1151,7 +1151,7 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9d.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
