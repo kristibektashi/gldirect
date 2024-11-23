@@ -1151,9 +1151,8 @@ BOOL gldInitialiseMesa_DX(
 
 	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_LIGHTING, FALSE);
 	//IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CULLMODE, D3DCULL_NONE);
-    IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CULLMODE, D3DCULL_CCW);
-	
-    IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_DITHERENABLE, TRUE);
+	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CULLMODE, D3DCULL_CCW);
+	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_DITHERENABLE, TRUE);
 	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_SHADEMODE, D3DSHADE_GOURAUD);
 	IDirect3DDevice9_SetRenderState(gld->pDev, D3DRS_CLIPPING, TRUE); // KeithH
 

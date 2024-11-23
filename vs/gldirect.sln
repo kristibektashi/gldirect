@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MesaLib", "MesaLib.vcxproj", "{B6293DC7-7988-4595-B42B-C1B82C8D0CB9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opengl32", "gld9.vcxproj", "{3B26FE1A-4046-4401-8B1B-57931B9C089A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gld9", "gld9.vcxproj", "{3B26FE1A-4046-4401-8B1B-57931B9C089A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

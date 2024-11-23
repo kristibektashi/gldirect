@@ -178,7 +178,6 @@ extern "C" {
 #define GL_CONVOLUTION_BORDER_COLOR       0x8154
 #endif
 
-
 #ifndef GL_VERSION_1_3
 #define GL_TEXTURE0                       0x84C0
 #define GL_TEXTURE1                       0x84C1
