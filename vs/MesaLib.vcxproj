@@ -101,45 +101,48 @@
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)</IntDir>
+    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)</IntDir>
+    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)</IntDir>
+    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)</IntDir>
-    <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
+    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)</IntDir>
-    <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
+    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)</IntDir>
+    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions>/Zm280  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;..\nasm-0.99.06;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Debug/MesaLib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\mesalib\MesaLib_Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\mesalib\MesaLib_Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\mesalib\MesaLib_Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -149,27 +152,27 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>.\mesalib\MesaLib_Debug\MesaLib.lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\mesalib\MesaLib_Debug/MesaLib.bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions>/Zm280  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;..\nasm-0.99.06;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Debug/MesaLib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\mesalib\MesaLib_Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\mesalib\MesaLib_Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\mesalib\MesaLib_Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -179,27 +182,27 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>.\mesalib\MesaLib_Debug\MesaLib.lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\mesalib\MesaLib_Debug/MesaLib.bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <AdditionalOptions>/Zm280  %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;..\nasm-0.99.06;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Debug/MesaLib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\mesalib\MesaLib_Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\mesalib\MesaLib_Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\mesalib\MesaLib_Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -209,12 +212,12 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>.\mesalib\MesaLib_Debug\MesaLib.lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\mesalib\MesaLib_Debug/MesaLib.bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -232,10 +235,10 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Release/MesaLib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\mesalib\MesaLib_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\mesalib\MesaLib_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\mesalib\MesaLib_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -244,12 +247,12 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>.\mesalib\MesaLib_Release\MesaLib.lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\mesalib\MesaLib_Release/MesaLib.bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -267,10 +270,10 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Release/MesaLib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\mesalib\MesaLib_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\mesalib\MesaLib_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\mesalib\MesaLib_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -279,12 +282,12 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>.\mesalib\MesaLib_Release\MesaLib.lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\mesalib\MesaLib_Release/MesaLib.bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -299,13 +302,13 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Release/MesaLib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\mesalib\MesaLib_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\mesalib\MesaLib_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\mesalib\MesaLib_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -314,12 +317,12 @@
       <Culture>0x0809</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>.\mesalib\MesaLib_Release\MesaLib.lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\mesalib\MesaLib_Release/MesaLib.bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

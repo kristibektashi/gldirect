@@ -144,50 +144,70 @@
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\dx9\Debug\</OutDir>
-    <IntDir>.\dx9\Debug\</IntDir>
+    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'">
-    <OutDir>.\gld9___Win32_NullDriver_Release\</OutDir>
-    <IntDir>.\gld9___Win32_NullDriver_Release\</IntDir>
+    <OutDir>$(SolutionDir)..\bin\\gld9___Win32_$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\\gld9___Win32_$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\\gld9___Win32_$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\dx9\Release\</OutDir>
-    <IntDir>.\dx9\Release\</IntDir>
+    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -200,15 +220,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\dx9\Debug/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\dx9\Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\dx9\Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\dx9\Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -220,7 +240,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Debug/opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -245,14 +265,14 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\dx9\Debug/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\dx9\Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\dx9\Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\dx9\Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -264,7 +284,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>d3d9.lib;dxerr9.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Debug/opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -288,15 +308,15 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\dx9\Debug/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\dx9\Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\dx9\Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\dx9\Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -308,7 +328,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>glu32.lib;d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Debug/opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -338,11 +358,11 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\gld9___Win32_NullDriver_Release/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\gld9___Win32_NullDriver_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\gld9___Win32_NullDriver_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\gld9___Win32_NullDriver_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -350,10 +370,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/NullDriver_Release/opengl32.dll</OutputFile>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\MesaLib_Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <ImportLibrary>.\gld9___Win32_NullDriver_Release/opengl32.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
@@ -380,11 +400,11 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\gld9___Win32_NullDriver_Release/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\gld9___Win32_NullDriver_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\gld9___Win32_NullDriver_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\gld9___Win32_NullDriver_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -392,10 +412,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/NullDriver_Release/opengl32.dll</OutputFile>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\MesaLib_Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <ImportLibrary>.\gld9___Win32_NullDriver_Release/opengl32.lib</ImportLibrary>
     </Link>
@@ -421,11 +441,11 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\gld9___Win32_NullDriver_Release/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\gld9___Win32_NullDriver_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\gld9___Win32_NullDriver_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\gld9___Win32_NullDriver_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -433,10 +453,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/NullDriver_Release/opengl32.dll</OutputFile>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\MesaLib_Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <ImportLibrary>.\gld9___Win32_NullDriver_Release/opengl32.lib</ImportLibrary>
     </Link>
@@ -459,7 +479,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -467,10 +487,10 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\dx9\Release/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\dx9\Release/</AssemblerListingLocation>
-      <ObjectFileName>.\dx9\Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\dx9\Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
     <ResourceCompile>
@@ -480,9 +500,9 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Release/opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <ImportLibrary>.\dx9\Release/opengl32.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
@@ -506,7 +526,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -514,10 +534,10 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\dx9\Release/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\dx9\Release/</AssemblerListingLocation>
-      <ObjectFileName>.\dx9\Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\dx9\Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
     <ResourceCompile>
@@ -526,10 +546,10 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3dx9.lib;d3dx9.lib;dxerr9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Release/opengl32.dll</OutputFile>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <ImportLibrary>.\dx9\Release/opengl32.lib</ImportLibrary>
     </Link>
@@ -552,18 +572,18 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\dx9\Release/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\dx9\Release/</AssemblerListingLocation>
-      <ObjectFileName>.\dx9\Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\dx9\Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
     <ResourceCompile>
@@ -572,8 +592,8 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9d.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Release/opengl32.dll</OutputFile>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
