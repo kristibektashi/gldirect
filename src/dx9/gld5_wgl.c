@@ -151,7 +151,9 @@ BOOL gldGetDXErrorString_DX(
 	// Return a string describing the input HRESULT error code
 	//
 
-	const char *pStr = DXGetErrorString(hr);
+	//Doesn't work otherwise on ARM32
+	//const char *pStr = DXGetErrorString(hr);
+	const char *pStr = NULL;
 
 	if (pStr == NULL)
 		return FALSE;
