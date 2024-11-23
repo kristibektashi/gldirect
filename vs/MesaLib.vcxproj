@@ -54,7 +54,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{B6293DC7-7988-4595-B42B-C1B82C8D0CB9}</ProjectGuid>
     <RootNamespace>MesaLib</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -187,7 +187,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'">
     <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
@@ -197,27 +197,27 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'">
     <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">
     <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
@@ -227,22 +227,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">
     <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -1002,22 +1002,22 @@
   <ItemGroup>
     <CustomBuild Include="..\mesa\src\mesa\x86\common_x86_asm.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
@@ -1031,22 +1031,22 @@ nasm $(IntDir)%(Filename).asm -fwin32
     </CustomBuild>
     <CustomBuild Include="..\mesa\src\mesa\x86\glapi_x86.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
@@ -1060,22 +1060,22 @@ nasm $(IntDir)%(Filename).asm -fwin32
     </CustomBuild>
     <CustomBuild Include="..\mesa\src\mesa\x86\x86_cliptest.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
@@ -1089,22 +1089,22 @@ nasm $(IntDir)%(Filename).asm -fwin32
     </CustomBuild>
     <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform2.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
@@ -1118,22 +1118,22 @@ nasm $(IntDir)%(Filename).asm -fwin32
     </CustomBuild>
     <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform3.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
@@ -1147,22 +1147,22 @@ nasm $(IntDir)%(Filename).asm -fwin32
     </CustomBuild>
     <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform4.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
-nasm $(IntDir)%(Filename).asm -fwin32
+$(SolutionDir)..\nasm-0.99.06\nasm.exe $(IntDir)%(Filename).asm -fwin64
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
