@@ -466,7 +466,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
       <PrecompiledHeaderOutputFile>.\dx9\Release/gld9.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\dx9\Release/</AssemblerListingLocation>
+      <AssemblerListingLocation>.\dx9\Release\</AssemblerListingLocation>
       <ObjectFileName>.\dx9\Release/</ObjectFileName>
       <ProgramDataBaseFileName>.\dx9\Release/</ProgramDataBaseFileName>
       <SuppressStartupBanner>true</SuppressStartupBanner>
