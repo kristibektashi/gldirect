@@ -63,6 +63,7 @@ const WCHAR* __stdcall DXGetErrorStringW(HRESULT hr);
     #define DXGetErrorString DXGetErrorStringA
 #endif 
 
+
 //
 //  DXTrace
 //
