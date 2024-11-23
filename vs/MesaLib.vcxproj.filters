@@ -2,10 +2,10 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="main">
-      <UniqueIdentifier>{f6220e62-80da-4bfa-a352-30ac9a309126}</UniqueIdentifier>
+      <UniqueIdentifier>{8d71ef20-6e29-4267-9c60-5f3b7ab93cd3}</UniqueIdentifier>
     </Filter>
     <Filter Include="math">
-      <UniqueIdentifier>{eadf468d-128c-44bd-ad7d-029f1a41b755}</UniqueIdentifier>
+      <UniqueIdentifier>{a232ab69-8a4b-4ca5-8523-ee6c1c4426b8}</UniqueIdentifier>
     </Filter>
     <Filter Include="glapi">
       <UniqueIdentifier>{2143b3df-8e3c-4417-9674-25414a536f6e}</UniqueIdentifier>
@@ -14,7 +14,7 @@
       <UniqueIdentifier>{6fabdf25-0223-4eef-9694-f7504d92830f}</UniqueIdentifier>
     </Filter>
     <Filter Include="tnl">
-      <UniqueIdentifier>{1143b80f-1def-467c-b3e9-617625610423}</UniqueIdentifier>
+      <UniqueIdentifier>{679e1df7-3dc6-423d-8a09-84eb95c3f97f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
