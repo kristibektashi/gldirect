@@ -5,6 +5,18 @@
       <Configuration>Debug</Configuration>
       <Platform>ARM</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64EC">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64EC</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|CHPE">
+      <Configuration>Debug</Configuration>
+      <Platform>CHPE</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
@@ -17,6 +29,18 @@
       <Configuration>NullDriver_Release</Configuration>
       <Platform>ARM</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="NullDriver_Release|ARM64">
+      <Configuration>NullDriver_Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="NullDriver_Release|ARM64EC">
+      <Configuration>NullDriver_Release</Configuration>
+      <Platform>ARM64EC</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="NullDriver_Release|CHPE">
+      <Configuration>NullDriver_Release</Configuration>
+      <Platform>CHPE</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="NullDriver_Release|Win32">
       <Configuration>NullDriver_Release</Configuration>
       <Platform>Win32</Platform>
@@ -28,6 +52,18 @@
     <ProjectConfiguration Include="Release|ARM">
       <Configuration>Release</Configuration>
       <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64EC">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64EC</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|CHPE">
+      <Configuration>Release</Configuration>
+      <Platform>CHPE</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
@@ -52,6 +88,12 @@
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
@@ -64,7 +106,25 @@
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|CHPE'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
@@ -82,7 +142,25 @@
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64EC'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
@@ -100,10 +178,26 @@
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
@@ -115,7 +209,19 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|CHPE'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
@@ -127,7 +233,19 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64EC'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
@@ -139,11 +257,27 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'">
     <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
@@ -167,7 +301,29 @@
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'">
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|CHPE'">
     <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
@@ -185,7 +341,27 @@
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64EC'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">
     <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
@@ -209,6 +385,22 @@
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>opengl32</TargetName>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -217,6 +409,48 @@
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>.\dx9\Debug/gld9.tlb</TypeLibraryName>
       <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\dx9\Debug/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
@@ -334,6 +568,90 @@
       <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\dx9\Debug/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\dx9\Debug/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'">
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -342,6 +660,46 @@
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>.\gld9___Win32_NullDriver_Release/gld9.tlb</TypeLibraryName>
       <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>\mssdk\include;..\mesa\src;..\mesa\include;..\src\utils;\scitech\private\include;\scitech\scitech\include;..;..\mesa\src\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;USE_3DNOW_ASM;USE_SSE_ASM;USE_MMX_ASM;WIN32_THREADS;GLD_THREADS;NO_LICENSE;BUILD_GL32;_USE_GLD3_WGL;_GLD3;GLD5_NULL_DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|CHPE'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\gld9___Win32_NullDriver_Release/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
     </Midl>
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
@@ -454,6 +812,86 @@
       <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\gld9___Win32_NullDriver_Release/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>\mssdk\include;..\mesa\src;..\mesa\include;..\src\utils;\scitech\private\include;\scitech\scitech\include;..;..\mesa\src\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;USE_3DNOW_ASM;USE_SSE_ASM;USE_MMX_ASM;WIN32_THREADS;GLD_THREADS;NO_LICENSE;BUILD_GL32;_USE_GLD3_WGL;_GLD3;GLD5_NULL_DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64EC'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\gld9___Win32_NullDriver_Release/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>\mssdk\include;..\mesa\src;..\mesa\include;..\src\utils;\scitech\private\include;\scitech\scitech\include;..;..\mesa\src\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;USE_3DNOW_ASM;USE_SSE_ASM;USE_MMX_ASM;WIN32_THREADS;GLD_THREADS;NO_LICENSE;BUILD_GL32;_USE_GLD3_WGL;_GLD3;GLD5_NULL_DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -462,6 +900,51 @@
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>.\dx9\Release/gld9.tlb</TypeLibraryName>
       <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\dx9\Release/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
@@ -545,6 +1028,96 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\dx9\Release/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\dx9\Release/gld9.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)Include;..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
