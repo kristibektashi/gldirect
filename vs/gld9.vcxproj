@@ -270,7 +270,7 @@
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
@@ -278,7 +278,7 @@
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'">
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
@@ -289,7 +289,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -297,7 +297,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -305,7 +305,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -313,48 +313,48 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'">
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|CHPE'">
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64EC'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
@@ -362,7 +362,7 @@
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
@@ -373,7 +373,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -381,7 +381,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -389,7 +389,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -397,7 +397,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
