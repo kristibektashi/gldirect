@@ -1,2 +1,3 @@
 bin/
-mesalib/
+mesa/obj/
+mesa/lib/
