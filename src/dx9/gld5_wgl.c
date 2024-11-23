@@ -264,7 +264,6 @@ HRESULT _gldCreatePrimitiveBuffer(
 	dwUsage = D3DUSAGE_DYNAMIC | D3DUSAGE_WRITEONLY;	// We will lock frequently and never read from buffer (write only).
 	if (!gld->bHasHWTnL)
 		dwUsage	|= D3DUSAGE_SOFTWAREPROCESSING;
-
 	hr = IDirect3DDevice9_CreateVertexBuffer(
 		gld->pDev,
 		GLD_4D_VERTEX_SIZE * gld->dwMaxVBVerts,
