@@ -73,18 +73,22 @@
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\mesalib\MesaLib_Debug\</OutDir>
-    <IntDir>.\mesalib\MesaLib_Debug\</IntDir>
+    <OutDir>.\mesalib\MesaLib_Debug\x86</OutDir>
+    <IntDir>.\mesalib\MesaLib_Debug\x86</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <OutDir>.\mesalib\MesaLib_Debug\ARM</OutDir>
+    <IntDir>.\mesalib\MesaLib_Debug\ARM</IntDir>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\mesalib\MesaLib_Release\</OutDir>
-    <IntDir>.\mesalib\MesaLib_Release\</IntDir>
+    <OutDir>.\mesalib\MesaLib_Release\x86</OutDir>
+    <IntDir>.\mesalib\MesaLib_Release\x86</IntDir>
     <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
-    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
+    <OutDir>.\mesalib\MesaLib_Release\ARM</OutDir>
+    <IntDir>.\mesalib\MesaLib_Release\ARM</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
