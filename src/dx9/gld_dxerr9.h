@@ -62,15 +62,6 @@ const WCHAR* __stdcall DXGetErrorStringW(HRESULT hr);
 #else
     #define DXGetErrorString DXGetErrorStringA
 #endif 
-//const char*  __stdcall DXGetErrorStringA(HRESULT hr);
-//const WCHAR* __stdcall DXGetErrorStringW(HRESULT hr);
-//
-//#ifdef UNICODE
-//    #define DXGetErrorString DXGetErrorStringW
-//#else
-//    #define DXGetErrorString DXGetErrorStringA
-//#endif 
-
 
 //
 //  DXTrace
