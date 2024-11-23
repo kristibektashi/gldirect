@@ -54,8 +54,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{B6293DC7-7988-4595-B42B-C1B82C8D0CB9}</ProjectGuid>
     <RootNamespace>MesaLib</RootNamespace>
-    <WindowsTargetPlatformVersion Condition="'$(Platform)'!='CHPE'">10.0.14393.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformVersion Condition="'$(Platform)'=='CHPE'">10.0.22621.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
