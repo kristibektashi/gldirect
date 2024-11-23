@@ -101,17 +101,17 @@
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
+    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
