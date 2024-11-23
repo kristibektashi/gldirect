@@ -144,7 +144,7 @@
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
@@ -155,7 +155,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -163,30 +163,30 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'">
-    <OutDir>$(SolutionDir)..\bin\\gld9___Win32_$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\bin\\gld9___Win32_$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\bin\\gld9___Win32_$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
@@ -197,7 +197,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x64;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -205,7 +205,7 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)..\bin\dx9\$(Configuration)\$(Platform)</OutDir>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\$(Platform)</OutDir>
     <IntDir>$(ShortProjectName)\obj\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>opengl32</TargetName>
   </PropertyGroup>
@@ -240,18 +240,15 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\dx9\Debug/opengl32.pdb</ProgramDatabaseFile>
-      <ImportLibrary>.\dx9\Debug/opengl32.lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\dx9\Debug/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -283,18 +280,16 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;dxerr9.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\dx9\Debug/opengl32.pdb</ProgramDatabaseFile>
-      <ImportLibrary>.\dx9\Debug/opengl32.lib</ImportLibrary>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\dx9\Debug/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -327,18 +322,16 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>glu32.lib;d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\dx9\Debug/opengl32.pdb</ProgramDatabaseFile>
-      <ImportLibrary>.\dx9\Debug/opengl32.lib</ImportLibrary>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\dx9\Debug/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'">
@@ -371,16 +364,14 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
-      <ImportLibrary>.\gld9___Win32_NullDriver_Release/opengl32.lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\gld9___Win32_NullDriver_Release/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|x64'">
@@ -413,15 +404,14 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
-      <ImportLibrary>.\gld9___Win32_NullDriver_Release/opengl32.lib</ImportLibrary>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\gld9___Win32_NullDriver_Release/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM'">
@@ -454,15 +444,14 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
-      <ImportLibrary>.\gld9___Win32_NullDriver_Release/opengl32.lib</ImportLibrary>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\gld9___Win32_NullDriver_Release/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -500,16 +489,14 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
-      <ImportLibrary>.\dx9\Release/opengl32.lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\dx9\Release/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -547,15 +534,14 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
-      <ImportLibrary>.\dx9\Release/opengl32.lib</ImportLibrary>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\dx9\Release/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -593,15 +579,14 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
-      <ImportLibrary>.\dx9\Release/opengl32.lib</ImportLibrary>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\dx9\Release/gld9.bsc</OutputFile>
+      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
