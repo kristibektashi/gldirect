@@ -206,5 +206,6 @@
     <None Include="opengl32.def">
       <Filter>def</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

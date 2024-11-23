@@ -57,7 +57,7 @@ static char _gldRendererString[1024];
 static char *g_szGLDVendor		= "SciTech Software, Inc.";
 
 // Based on mesa\src\mesa\main\get.c::_mesa_GetString
-static char *g_szGLDVersion		= "1.1 Mesa " MESA_VERSION_STRING;
+static char *g_szGLDVersion		= "1.4 Mesa " MESA_VERSION_STRING;
 
 // extensions
 // Quake3 is slower with GL_EXT_compiled_vertex_array !
