@@ -417,7 +417,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -440,7 +440,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'">
@@ -459,7 +459,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -482,7 +482,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -500,7 +500,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -523,7 +523,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -542,7 +542,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -565,7 +565,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
@@ -584,7 +584,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -607,7 +607,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'">
@@ -626,7 +626,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -649,7 +649,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|Win32'">
@@ -669,7 +669,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
@@ -684,12 +684,12 @@
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|CHPE'">
@@ -709,7 +709,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
@@ -724,12 +724,12 @@
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|x64'">
@@ -749,7 +749,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
@@ -764,12 +764,12 @@
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM'">
@@ -789,7 +789,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
@@ -804,12 +804,12 @@
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64'">
@@ -829,7 +829,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
@@ -844,12 +844,12 @@
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='NullDriver_Release|ARM64EC'">
@@ -869,7 +869,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
@@ -884,12 +884,12 @@
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -914,7 +914,7 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -934,7 +934,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">
@@ -959,7 +959,7 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -979,7 +979,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -1004,7 +1004,7 @@
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -1024,7 +1024,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -1049,7 +1049,7 @@
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -1069,7 +1069,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
@@ -1094,7 +1094,7 @@
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -1114,7 +1114,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">
@@ -1139,7 +1139,7 @@
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>$(OutDir)\$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
       <ObjectFileName>$(OutDir)</ObjectFileName>
       <ProgramDataBaseFileName>$(OutDir)</ProgramDataBaseFileName>
@@ -1159,7 +1159,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(OutDir)/$(ProjectName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

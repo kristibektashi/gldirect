@@ -54,7 +54,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{B6293DC7-7988-4595-B42B-C1B82C8D0CB9}</ProjectGuid>
     <RootNamespace>MesaLib</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -185,63 +185,65 @@
     <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|CHPE'">
-    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64EC'">
-    <OutDir>.\mesalib\$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|CHPE'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
-    <ExecutablePath>$(SolutionDir)\nasm-0.99.06;$(ExecutablePath)</ExecutablePath>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
+    <ExternalIncludePath>
+    </ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64EC'">
-    <OutDir>.\mesalib\$(ProjectName)_$(Configuration)\$(Platform)\</OutDir>
-    <IntDir>.\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)\..\mesa\lib\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\..\mesa\obj\$(Configuration)\$(Platform)\</IntDir>
     <ExecutablePath>$(SolutionDir)\nasm-0.99.06\;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
