@@ -82,7 +82,10 @@
     <IntDir>.\mesalib\MesaLib_Release\</IntDir>
     <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions>/Zm280  %(AdditionalOptions)</AdditionalOptions>
