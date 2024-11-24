@@ -153,7 +153,8 @@ BOOL gldGetDXErrorString_DX(
 
 	//Doesn't work otherwise on ARM32
 	//const char *pStr = DXGetErrorString(hr);
-	const char *pStr = NULL;
+	const char *pStr = "DXGetErrorString9() not supported...";
+	return FALSE
 
 	if (pStr == NULL)
 		return FALSE;
